@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	</head>
+	<body>
+		<p><input name="chk" type="checkbox" value="滑雪" />滑雪 </p>
+		<p><input name="chk" type="checkbox" value="游泳" />游泳 </p>
+		<p><input name="chk" type="checkbox" value="爬山" />爬山 </p>
+		<p><input name="btn" type="button" value="选择" onclick="allChecked()" /></p>
+		<p><button>全选</button> </p>
+			<p><button>反选</button></p>
+			<p><button>取消</button></p>
+	</body>
+	<script>
+	    window.onload=function(){
+				var btns=document.getElementsByTagName("button");
+				var inputs=document.getElementsByTagName("input");
+				function all(flag){
+					for(var i=0;i<inputs.length;i++){
+						inputs[i].checked=flag;
+					}
+				}
+				btns[0].onclick=function(){
+					all(true);
+				}
+				//2.反选
+				btns[1].onclick=function(){
+					for(var i=0;i<inputs.length;i++){
+						inputs[i].checked==true?inputs[i].checked=false:inputs[i].checked=true;
+					}
+				}
+				btns[2].onclick=function(){
+					all(false);
+				}
+			}
+	</script>
+</html>

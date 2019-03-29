@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin:0 ;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+			}
+			li,button{
+				margin-top: 30px;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script>
+			$("#ul1").before($("<p>before</p>"));
+			$("<p>insertBefore</p>").insertBefore($("#ul1"));
+	</script>
+	</head>
+	<body>
+		<ul>
+		  <li>姓名：<input type="text" /></li>
+		  <li>年龄：<input type="text" /></li>
+		  <li>电话：<input type="text" /></li>
+		  <li>住址：<input type="text" /></li>
+	</ul>
+		   <button>确认</button>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" value="请输入账号" id="tet"/>
+		
+	</body>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script>
+        var tet=$("#tet").val();
+        $("#tet").on("focus",function(){
+        	if($(this).val()==tet){
+        		$(this).val("");
+        	}
+        });
+        $("#tet").on("blur",function(){
+        	if($(this).val()==""){
+        		$(this).val(tet);
+        		$(this)[0].value=tet;
+        	}
+        });
+        //		
+//		//第二题
+//		$("<div id='div1'></div>").appendTo($("body"));
+//		$("#div1").css({
+//			"width":"200px",
+//			"height":"200px",
+//			"border":"2px solid #eee",
+//			"background-color":"red",
+//			"position":"absolute",
+//			"top":0,
+//			"left":0,
+//			"cursor":"move"
+//		});
+//		$("body").on("mousemove",function(event){
+//			event = event || window.event;
+//			var x=event.clientX-$("#div1").width()/2;
+//			var y=event.clientY-$("#div1").height()/2;
+//			$("#div1").css({
+//				"left":x+"px",
+//				"top":y+"px"
+//			});
+//		});
+		
+
+
+        $("<div id='div1'></div>").appendTo($("body"))
+        $("#div1").css({
+        	"width":"200px",
+        	"height":"200px",
+        	"border":"2px solid #eee",
+        	"background-color":"red",
+        	"position":"absolute",
+        	"top":0,
+        	"left":0,
+        	"cousor":"move"
+        })
+        $("body").on("mousemove",function(event){
+        	event = event || window.event;
+        	var x=event.clientX-$("#div1").width()/2;
+        	var y=event.clienty-$("#div1").height()/2;
+        	$("#div1").css({
+        		"left":x+"px",
+        		"top":y+"px"
+        	});
+        });
+	</script>
+</html>

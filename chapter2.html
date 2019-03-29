@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="ul1">
+			<li>1</li>
+			<li class="demo2">2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<p id="p1">dd</p>
+		<button id="btn">点你们</button>
+	</body>
+	<script src="../chaptor1/js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			//创建元素  $("<img/>")
+//			$("<p id='p1'>dddd</p>")
+			//jQuery追加元素 8个方法
+			//1.append()  appendTo()
+//			$("#ul1").append($("<P>append</p>"));
+//			$("<p>appendTo</p>").appendTo($("#ul1"));
+
+			//2.prepend()  prependTo()
+//			$("#ul1").prepend($("<p>prepend</p>"));
+//			$("<p>prependTo</p>").prependTo($("#ul1"));
+			
+			//3.after()  insetAfter()
+//			$("#ul1").after($("<p>after</p>"));
+//			$("<p>insetAfter</p>").insertAfter($("#ul1"));
+
+			//4.before()  insertBefore()
+//			$("#ul1").before($("<p>before</p>"));
+//			$("<p>insertBefore</p>").insertBefore($("#ul1"));
+			
+			//删除元素
+			//1.remove
+//			$("#ul1").remove();
+//			$("li").remove();
+//			$("li").remove(".demo2");
+			
+			//2.empty()
+//			$("#ul1").empty();
+			
+			//替换
+			//1.replaceWith()
+//			$("li").replaceWith($("<p>dddd</p>"));
+			//2.replaceAll()
+//			$("<div>div</div>").replaceAll($("li"));
+
+			//遍历
+//			$("li").each(function(index){
+////				console.log("index="+index+"*****element="+element);
+//				$(this).css("color","red");
+//			});
+
+			//克隆
+			//clone()
+//			$("ul").clone().insertAfter($("#ul1"));
+//			$("p").clone().insertBefore($("#ul1"));
+			
+//			$("#p1").click(function(){
+//				alert("ddd");
+//			});
+//			$("p").clone(false).insertBefore($("#ul1"));
+
+			//jQuery对象 和DOM对象的区别
+			
+//			console.log($("li"));
+			
+			var ul=document.getElementById("ul1");
+//			console.log(ul);
+			
+			//JQuery对象转换成DOM对象
+			//1.[]
+//			console.log($("#ul1"));
+//			console.log($("#ul1")[0]);
+			//2.get(下标)
+//			console.log($("#ul1"));
+//			console.log($("#ul1").get(0));
+
+			//DOM 对象 转换成JQuery对象
+			//$()
+//			console.log(ul);
+//			console.log($(ul));
+
+			var btn=document.getElementById("btn");
+			//js 事件绑定
+			btn.onclick=function(){
+				alert("js  onclick");
+			};
+			//事件执行
+			btn.click();
+		});
+	</script>
+</html>

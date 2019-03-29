@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="txt" id="txt" value="请输入内容" />
+	</body>
+	<script src="../chaptor1/js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var txt=$("#txt").val();
+//		获取焦点
+		$("#txt").on("focus",function(){
+			if($(this).val()==txt){
+				$(this).val("");
+			}
+			
+		});
+		//失去焦点
+		$("#txt").on("blur",function(){
+			if($(this).val()==""){
+				$(this).val(txt);
+//				$(this)[0].value=txt;
+			}
+		});
+		
+		//第二题
+		$("<div id='div1'></div>").appendTo($("body"));
+		$("#div1").css({
+			"width":"200px",
+			"height":"200px",
+			"border":"2px solid #eee",
+			"background-color":"red",
+			"position":"absolute",
+			"top":0,
+			"left":0,
+			"cursor":"move"
+		});
+		$("body").on("mousemove",function(event){
+			event = event || window.event;
+			var x=event.clientX-$("#div1").width()/2;
+			var y=event.clientY-$("#div1").height()/2;
+			$("#div1").css({
+				"left":x+"px",
+				"top":y+"px"
+			});
+		});
+		$("body").off("mousemove");
+	</script>
+</html>

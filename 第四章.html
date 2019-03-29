@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#demo{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				margin-bottom:10px ;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="dome"></div>
+		<button id="hide">隐藏</button>
+		<button id="show">显示</button>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function(){
+			$("#hide").click(function(){
+				$("#demo").hide(500);
+			});
+			$("#show").click(function(){
+				$("#demo").show(500);
+			});
+		})
+	</script>
+</html>
